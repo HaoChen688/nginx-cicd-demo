@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+.card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
+  text-align: center;
+  max-width: 520px;
+}
+.card h1 { margin-bottom: 16px; font-size: 26px; }
+.card p { margin: 8px 0; color: #555; }
+.card button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #11998e;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.card button:hover { background: #0d7a70; }

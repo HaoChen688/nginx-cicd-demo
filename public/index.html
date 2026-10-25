@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nginx CI/CD Demo</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Nginx CI/CD Demo</h1>
+    <p>该页面由 GitHub Actions 自动部署到阿里云 CentOS ECS（Nginx）。</p>
+    <p>部署时间（UTC）：<span id="ts"></span></p>
+    <button onclick="location.reload()">刷新</button>
+  </div>
+  <script>
+    document.getElementById('ts').textContent = new Date().toISOString();
+  </script>
+</body>
+</html>
