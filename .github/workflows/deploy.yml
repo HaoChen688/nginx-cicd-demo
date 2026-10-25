@@ -2,7 +2,7 @@ name: CI/CD Deploy to Aliyun ECS (Nginx)
 
 on:
   push:
-    branches: [ "main" ] 
+    branches: [ "main" ]  
   workflow_dispatch:
 
 env:
