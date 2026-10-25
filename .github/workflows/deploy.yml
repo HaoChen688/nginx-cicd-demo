@@ -31,7 +31,13 @@ jobs:
 
       - name: Validate nginx config syntax (docker)
         run: |
-          docker run --rm -v "$PWD/nginx:/etc/nginx/conf.d:ro" nginx:alpine nginx -t
+          #docker 默认走docker.io,dockerhub 登录需要验证，会拉取失败
+          #docker run --rm -v "$PWD/nginx:/etc/nginx/conf.d:ro" nginx:alpine nginx -t
+          
+          #走github 自己镜像仓库ghcr，actions 访问更稳
+          docker pull ghcr.io/nginxinc/nginx-unprivileged:alpine
+          docker run --rm -v "$PWD/nginx:/etc/nginx/conf.d:ro" ghcr.io/nginxinc/nginx-unprivileged:alpine nginx -t
+
 
   deploy:
     name: Deploy to ECS (CD)
